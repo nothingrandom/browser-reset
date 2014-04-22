@@ -1,18 +1,4 @@
-/*
-Theme Name:		Benjamin Hollway Default
-Theme URI:		Dynamic
-Description:	Default theme for sites created by Benjamin
-
-Author:			Benjamin Hollway
-Author URI:		http: //nothingrandom.com
-
-Version:		1.0.3
-Last Updated:	19th February 2013
-Changes:		Modified comments
-*/
-
-/*Made public on GitHub - 19/2/14
-When distributed credit to Benjamin Hollway*/
+/*https://github.com/nothingrandom/default.css*/
 
 html, body {
 	height: 100%;
@@ -31,7 +17,7 @@ body {
 }
 
 img {
-	pointer-events: none; 
+	pointer-events: none;
 	/*This stops an image from being right clicked and saved (or dragged on Mac).
 	It also means that you cannot use an image as a link.
 	To use an image as a link set the linked image class/id to "pointer-events: auto"*/
@@ -40,7 +26,7 @@ img {
 
 @media screen and (max-width:500px) {
 	body {
-		-webkit-text-size-adjust: none; 
+		-webkit-text-size-adjust: none;
 		/*this is to stop iOS from changing text size*/
 		/*currently excludes ipad*/
 		/*needs further testing on android*/
