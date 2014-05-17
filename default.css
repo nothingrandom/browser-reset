@@ -27,8 +27,11 @@ img {
 @media screen and (max-width:500px) {
 	body {
 		-webkit-text-size-adjust: none;
-		/*this is to stop iOS from changing text size*/
-		/*currently excludes ipad*/
+		-ms-text-size-adjust: none;
+		-mos-text-size-adjust: none;
+		/*this is to stop iOS, Windows, and Firefox phones from changing text size*/
+		/*currently excludes ipad - change max width to include*/
+
 		/*needs further testing on android*/
 	}
 }
