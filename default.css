@@ -23,6 +23,10 @@ img {
 	To use an image as a link set the linked image class/id to "pointer-events: auto"*/
 }
 
+header, section, footer, aside, nav, main, article, figure {
+	display: block;
+	/*This is the default setting on new browser, set so old browsers also view it the same*/
+}
 
 @media screen and (max-width:500px) {
 	body {
