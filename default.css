@@ -42,22 +42,22 @@ header, section, footer, aside, nav, main, article, figure {
 
 /*Default font effects for span as follow:*/
 
-span#italic {
+span.italic {
 	font-style: italic;
 }
 
-span#bold {
+span.bold {
 	font-weight: bold;
 }
 
-span#under {
+span.under {
 	text-decoration: underline;
 }
 
-span#strike {
+span.strike {
 	text-decoration: line-through;
 }
 
-span#upper {
+span.upper {
 	text-transform: uppercase;
 }
