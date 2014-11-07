@@ -1,6 +1,8 @@
 // https://github.com/nothingrandom/default.css
 
 html {
+	overflow-x: hidden;
+	overflow-y: scroll;
 	// Prevent text resize after orientation change on iOS
 	-mos-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
@@ -126,8 +128,19 @@ sub {
 // ======================================================
 
 // Remove border when inside link in IE 8-10
+// Set as a block for styling
 img {
+	display: block;
 	border: 0;
+
+	// Prevents an image from being dragged on OS X or being right clicked and saved
+	pointer-events: none;
+
+	// Unless it's a link
+	a,
+	& a {
+		pointer-events: auto;
+	}
 }
 
 // Correct overflow hidden in IE 9-11
@@ -135,11 +148,8 @@ svg:not(:root) {
 	overflow: hidden;
 }
 
-ol,
-ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+iframe {
+	border: 0;
 }
 
 // Grouping content
@@ -301,18 +311,22 @@ th {
 	padding: 0;
 }
 
-// Images
+// Lists
 // ======================================================
 
-// Prevents an image from being dragged on OS X or being right clicked and saved
-img {
-	pointer-events: none;
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 
-	// Unless it's a link
-	a,
-	& a {
-		pointer-events: auto;
-	}
+// Tab Index
+// ======================================================
+
+// Prevent focus outline on links that cannot be accessed via keyboard
+[tabindex="-1"]:focus {
+	outline: none !important;
 }
 
 // Legacy
