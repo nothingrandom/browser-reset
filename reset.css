@@ -1,21 +1,25 @@
-/* https://github.com/nothingrandom/reset.css */
-
-/* based off of
-	@see normalize: http://necolas.github.io/normalize.css/
-	@see Reset CSS: http://meyerweb.com/eric/tools/css/reset/
-*/
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
 
 html {
+	-mos-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
 
 html,
 body {
+	overflow-x: hidden;
 	height: 100%;
+	font-size: 1em;
 }
 
 body {
+	position: relative;
+	min-height: 100%;
 	margin: 0;
 	padding: 0;
 	cursor: default;
@@ -43,7 +47,16 @@ canvas,
 progress,
 video {
 	display: inline-block;
-	vertical-align: baseline;
+}
+
+audio,
+canvas,
+iframe,
+img,
+progress,
+svg,
+video {
+	vertical-align: middle;
 }
 
 audio:not([controls]) {
@@ -58,6 +71,9 @@ template {
 
 a {
 	background-color: transparent;
+}
+a:hover {
+	cursor: pointer;
 }
 
 abbr[title] {
@@ -74,8 +90,8 @@ dfn {
 }
 
 mark {
-	color: #000;
-	background: #FF0;
+	background: #FFFF00;
+	color: #000000;
 }
 
 small {
@@ -98,19 +114,25 @@ sub {
 	bottom: -.25em;
 }
 
+::selection,
+::-moz-selection {
+	text-shadow: none !important;
+}
+
 img {
+	display: block;
+	max-width: 100%;
+	height: auto;
 	border: 0;
+	-ms-interpolation-mode: bicubic;
 }
 
 svg:not(:root) {
 	overflow: hidden;
 }
 
-ol,
-ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+iframe {
+	border: 0;
 }
 
 figure {
@@ -156,9 +178,9 @@ select {
 }
 
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
 	-moz-appearance: button;
 	-webkit-appearance: button;
 	cursor: pointer;
@@ -179,26 +201,26 @@ input {
 	line-height: normal;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
 	box-sizing: border-box;
 	padding: 0;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
 	height: auto;
 }
 
-input[type="search"] {
+input[type='search'] {
 	-moz-box-sizing: content-box;
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
 	-webkit-appearance: textfield;
 }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
@@ -216,6 +238,7 @@ legend {
 
 textarea {
 	overflow: auto;
+	resize: vertical;
 }
 
 optgroup {
@@ -232,31 +255,26 @@ th {
 	padding: 0;
 }
 
-img {
-	pointer-events: none;
-}
-img a, img a {
-	pointer-events: auto;
-}
-
-span.italic {
-	font-style: italic;
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
-span.bold {
-	font-weight: bold;
+[tabindex='-1']:focus {
+	outline: none !important;
 }
 
-span.under {
-	text-decoration: underline;
+.hide {
+	display: none !important;
 }
 
-span.strike {
-	text-decoration: line-through;
+.show {
+	display: block !important;
 }
 
-span.upper {
-	text-transform: uppercase;
+.hidden {
+	display: none !important;
+	visibility: hidden !important;
 }
-
-/*# sourceMappingURL=default.css.map */
