@@ -3,10 +3,16 @@
 // based off of
 // @see normalize: http://necolas.github.io/normalize.css/
 // @see Reset CSS: http://meyerweb.com/eric/tools/css/reset/
+// with extras taken from bootstrap/foundation
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
 
 html {
-	overflow-x: hidden;
-	overflow-y: scroll;
+	// overflow-y: scroll;
 	// Prevent text resize after orientation change on iOS
 	-mos-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
@@ -15,10 +21,15 @@ html {
 
 html,
 body {
+	overflow-x: hidden;
 	height: 100%;
+	font-size: 1em;
 }
 
 body {
+	position: relative;
+	min-height: 100%;
+
 	// Remove default margin
 	margin: 0;
 	padding: 0;
@@ -30,7 +41,7 @@ body {
 }
 
 // HTML 5 Display definitions
-// ======================================================
+// ==============================
 
 // HTML5 block elements not defined correctly in IE 8-11 and Firefox.
 article,
@@ -50,13 +61,22 @@ summary {
 }
 
 // Inline block not defined correctly in IE 8-9
-// Vertical alignment should be baseline
 audio,
 canvas,
 progress,
 video {
 	display: inline-block;
-	vertical-align: baseline;
+}
+
+// Remove gap between elements and their containers
+audio,
+canvas,
+iframe,
+img,
+progress,
+svg,
+video {
+	vertical-align: middle;
 }
 
 // Stop modern browsers from showing auto without controls.
@@ -74,15 +94,19 @@ template {
 }
 
 // Links
-// ======================================================
+// ==============================
 
 // Remove that gray background color from links in IE 10
 a {
 	background-color: transparent;
+
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 // Text
-// ======================================================
+// ==============================
 
 // Styling not present in IE 8-11, Safari, and Chrome
 abbr[title] {
@@ -102,8 +126,8 @@ dfn {
 
 // Styling not present in IE 8-9
 mark {
-	color: #000;
-	background: #FF0;
+	background: #FFFF00;
+	color: #000000;
 }
 
 // Fixes inconsistency across all browsers
@@ -128,23 +152,23 @@ sub {
 	bottom: -.25em;
 }
 
+// @see https://twitter.com/miketaylr/status/12228805301
+::selection,
+::-moz-selection {
+	text-shadow: none !important;
+}
+
 // Embedded content
-// ======================================================
+// ==============================
 
 // Remove border when inside link in IE 8-10
 // Set as a block for styling
 img {
 	display: block;
+	max-width: 100%;
+	height: auto;
 	border: 0;
-
-	// Prevents an image from being dragged on OS X or being right clicked and saved
-	pointer-events: none;
-
-	// Unless it's a link
-	a,
-	& a {
-		pointer-events: auto;
-	}
+	-ms-interpolation-mode: bicubic;
 }
 
 // Correct overflow hidden in IE 9-11
@@ -157,7 +181,7 @@ iframe {
 }
 
 // Grouping content
-// ======================================================
+// ==============================
 
 // Margin not present in IE 8-9 and Safari
 figure {
@@ -177,7 +201,7 @@ pre {
 	overflow: auto;
 }
 
-// Fixes odd strange "em" unit font size rendering in browsers
+// Fixes odd strange 'em' unit font size rendering in browsers
 code,
 kbd,
 pre,
@@ -187,13 +211,12 @@ samp {
 }
 
 // Forms
-// ======================================================
+// ==============================
 
-// Limitation: By default, Chrome and Safari on OS X allow limited styling of "select", unless a border is set
+// Limitation: By default, Chrome and Safari on OS X allow limited styling of 'select', unless a border is set
 // Fixes variations of margins in Firefox, Safari, and Chrome
 // Correct color not being inherited
 // Correct font properties not being inherited
-
 button,
 input,
 optgroup,
@@ -209,7 +232,7 @@ button {
 	overflow: visible;
 }
 
-// Fixes inconsistency with "text-transform" inheritance for "button" and "select"
+// Fixes inconsistency with 'text-transform' inheritance for 'button' and 'select'
 // Button style in IE 8-11, Firefox, and Opera
 // Select style in Firefox
 button,
@@ -218,11 +241,11 @@ select {
 }
 
 // Avoid webkit bug in Android 4 with native audio and video controls
-// Fix inability to style clickable "input" types in iOS 6
+// Fix inability to style clickable 'input' types in iOS 6
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+html input[type='button'],
+input[type='reset'],
+input[type='submit'] {
 	-moz-appearance: button;
 	-webkit-appearance: button;
 	cursor: pointer;
@@ -241,29 +264,28 @@ input::-moz-focus-inner {
 	border: 0;
 }
 
-// Fix Firefox setting "line-height" on "input" using "!important" in the UA stylesheet
+// Fix Firefox setting 'line-height' on 'input' using '!important' in the UA stylesheet
 input {
 	line-height: normal;
 }
 
-// Fix "box-sizing" set to "content-box" in IE 8-10
+// Fix 'box-sizing' set to 'content-box' in IE 8-10
 // Remove excess padding in IE 8-10
-
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
 	box-sizing: border-box;
 	padding: 0;
 }
 
 // Fix the cursor style for Chrome's buttons
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
 	height: auto;
 }
 
-// Fix "box-sizing" set to "border-box" in Safari and Chrome
-// Fix "appearance" set to "searchfield" in Safari and Chrome
-input[type="search"] {
+// Fix 'box-sizing' set to 'border-box' in Safari and Chrome
+// Fix 'appearance' set to 'searchfield' in Safari and Chrome
+input[type='search'] {
 	-moz-box-sizing: content-box;
 	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
@@ -271,8 +293,8 @@ input[type="search"] {
 }
 
 // Remove inner padding and search cancel button in Safari and Chrome on OS X
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-decoration {
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
@@ -292,8 +314,10 @@ legend {
 }
 
 // Remove default vertical scrollbar in IE 8-11
+// Only allow for vertical resize
 textarea {
 	overflow: auto;
+	resize: vertical;
 }
 
 // Prevent inherit from lines 84-88
@@ -302,7 +326,7 @@ optgroup {
 }
 
 // Tables
-// ======================================================
+// ==============================
 
 // Remove spacing between table cells
 table {
@@ -316,7 +340,7 @@ th {
 }
 
 // Lists
-// ======================================================
+// ==============================
 
 ol,
 ul {
@@ -326,33 +350,24 @@ ul {
 }
 
 // Tab Index
-// ======================================================
+// ==============================
 
 // Prevent focus outline on links that cannot be accessed via keyboard
-[tabindex="-1"]:focus {
+[tabindex='-1']:focus {
 	outline: none !important;
 }
 
-// Legacy
-// ======================================================
-
-// Default font effects for span as follow:
-span.italic {
-	font-style: italic;
+// Helper classes
+// ==============================
+.hide {
+	display: none !important;
 }
 
-span.bold {
-	font-weight: bold;
+.show {
+	display: block !important;
 }
 
-span.under {
-	text-decoration: underline;
-}
-
-span.strike {
-	text-decoration: line-through;
-}
-
-span.upper {
-	text-transform: uppercase;
+.hidden {
+	display: none !important;
+	visibility: hidden !important;
 }
