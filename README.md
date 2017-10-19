@@ -1,4 +1,4 @@
-default.css
+reset.scss
 ===========
 
 Default stylesheet for websites
