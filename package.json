@@ -1,0 +1,23 @@
+{
+  "name": "reset.scss",
+  "version": "1.0.0",
+  "description": "A reset stylesheet for websites",
+  "main": "reset.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nothingrandom/reset.scss.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "reset",
+    "stylesheets",
+    "browser"
+  ],
+  "author": "Benjamin Hollway <benjamin@nothingrandom.com>",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/nothingrandom/reset.scss/issues"
+  },
+  "homepage": "https://github.com/nothingrandom/reset.scss#readme"
+}
