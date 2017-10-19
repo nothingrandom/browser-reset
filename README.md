@@ -1,11 +1,11 @@
 reset.scss
 ===========
-
-Default stylesheet for websites
+[![npm](https://img.shields.io/npm/v/browser-reset.svg)](https://www.npmjs.com/package/browser-reset)
+> Default stylesheet for websites
 
 ### Easy Installation
 
-`yarn install browser-reset`
+Just run `yarn add browser-reset` or `npm install -save brows-erreset`
 
 If you're using webpack to compile, you can use `@import '~browser-reset/reset.scss'`
 
