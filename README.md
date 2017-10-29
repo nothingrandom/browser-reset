@@ -1,7 +1,9 @@
-reset.scss
+browser-reset
 ===========
 [![npm](https://img.shields.io/npm/v/browser-reset.svg)](https://www.npmjs.com/package/browser-reset)
-> Default stylesheet for websites
+> A reset stylesheet for the modern web
+
+Browsers are inconsistent, each having their own ways of displaying things. This package aims to solve this problem by setting stylesheets back to a default look.
 
 ### Easy Installation
 
