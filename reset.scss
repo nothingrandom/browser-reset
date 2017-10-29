@@ -108,9 +108,12 @@ a {
 // Text
 // ==============================
 
-// Styling not present in IE 8-11, Safari, and Chrome
+// Remove the bottom border in Chrome 57- and Firefox 39-.
+// Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
 abbr[title] {
-  border-bottom: 1px dotted;
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
 }
 
 // Style set to bold
@@ -227,7 +230,7 @@ textarea {
   font: inherit;
 }
 
-// Fixes overflow set to hidden in IE 8-11
+// Fixes overflow set to hidden in IE 8-11, Edge
 button {
   overflow: visible;
 }
