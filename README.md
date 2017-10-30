@@ -7,7 +7,7 @@ Browsers are inconsistent, each having their own ways of displaying things. This
 
 ### Easy Installation
 
-Just run `yarn add browser-reset` or `npm install -save brows-erreset`
+Just run `yarn add browser-reset` or `npm install -save browser-reset`
 
 If you're using webpack to compile, you can use `@import '~browser-reset/reset.scss'`
 
