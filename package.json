@@ -1,8 +1,8 @@
 {
   "name": "browser-reset",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A reset stylesheet for the modern web",
-  "main": "reset.scss",
+  "main": "reset.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nothingrandom/browser-reset.git"
