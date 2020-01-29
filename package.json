@@ -1,8 +1,11 @@
 {
   "name": "browser-reset",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A reset stylesheet for the modern web",
   "main": "reset.css",
+  "scripts": {
+    "build": "node-sass reset.scss reset.css"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nothingrandom/browser-reset.git"
@@ -15,9 +18,12 @@
     "browser"
   ],
   "author": "Benjamin Hollway <benjamin@nothingrandom.com>",
-  "license": "GPL-2.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nothingrandom/browser-reset/issues"
   },
-  "homepage": "https://github.com/nothingrandom/browser-reset#readme"
+  "homepage": "https://github.com/nothingrandom/browser-reset#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
 }

@@ -11,6 +11,6 @@ Just run `yarn add browser-reset` or `npm install -save browser-reset`
 
 If you're using webpack to compile, you can use `@import '~browser-reset/reset.scss'`
 
-If you're using blendid you can use `@import 'browser-reset/reset.scss'`
+If you're using postcss you can use `postcss-import` then `@import 'browser-reset/reset.css'`
 
 If you're using a custom gulp / grunt task make sure your `includePath` for `node-sass` includes `node_modules`. Feel free to submit a issue if you have trouble setting this up.
