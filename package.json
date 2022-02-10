@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/nothingrandom/browser-reset#readme",
   "devDependencies": {
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   }
 }
